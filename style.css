@@ -1,162 +1,40 @@
-:root {
-  --bg: #ffffff;
-  --text: #111;
-  --accent: #4f46e5;
+/* Glassmorphism Effect */
+.glass { 
+    background: rgba(15, 23, 42, 0.4); 
+    backdrop-filter: blur(12px); 
+    border: 1px solid rgba(255, 255, 255, 0.05); 
+    transition: all 0.3s ease;
 }
 
-body.dark {
-  --bg: #0f172a;
-  --text: #e5e7eb;
+/* Hero Background Glow */
+.hero-gradient { 
+    background: radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.12) 0%, transparent 60%); 
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+/* Glowing Text for Key Achievements */
+.glow-text { 
+    text-shadow: 0 0 15px rgba(6, 182, 212, 0.6); 
 }
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  transition: 0.3s;
+/* Custom Scrollbar for Modern Feel */
+::-webkit-scrollbar {
+    width: 8px;
 }
 
-/* Toggle */
-.theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: var(--accent);
-  color: #fff;
-  border: none;
-  padding: 12px;
-  border-radius: 50%;
-  cursor: pointer;
+::-webkit-scrollbar-track {
+    background: #020617;
 }
 
-/* HERO */
-.hero {
-  min-height: 100vh;
-  background: linear-gradient(
-      rgba(0,0,0,0.6),
-      rgba(0,0,0,0.6)
-    ),
-    url("https://images.unsplash.com/photo-1518770660439-4636190af475");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 10px;
 }
 
-.hero-content {
-  color: white;
-  animation: fadeUp 1.2s ease;
+::-webkit-scrollbar-thumb:hover {
+    background: #0ea5e9;
 }
 
-.hero h1 {
-  font-size: 3.5rem;
-}
-
-.hero h2 {
-  margin: 10px 0;
-  font-weight: 400;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 30px;
-  background: var(--accent);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 30px;
-}
-
-/* SECTIONS */
-.section {
-  padding: 70px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.section h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.center {
-  text-align: center;
-}
-
-/* SKILLS */
-.skill {
-  margin-bottom: 20px;
-}
-
-.bar {
-  background: #ddd;
-  height: 10px;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.bar div {
-  height: 100%;
-  width: 0;
-  background: var(--accent);
-  transition: width 1.5s ease;
-}
-
-/* PROJECTS */
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-}
-
-.card {
-  background: rgba(0,0,0,0.05);
-  border-radius: 15px;
-  overflow: hidden;
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
-.card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-}
-
-.card h3 {
-  margin: 15px;
-}
-
-.card p {
-  margin: 0 15px 15px;
-}
-
-.card a {
-  margin: 0 15px 20px;
-  display: inline-block;
-  color: var(--accent);
-  text-decoration: none;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 25px;
-}
-
-/* ANIMATION */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
 }
